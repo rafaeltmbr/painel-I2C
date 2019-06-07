@@ -4,15 +4,15 @@ Projeto de Redes de Comunicação Automotiva do curso de [Tecnologia em Eletrôn
 ## Objetivo
 Criar uma rede de comunicação entre quatro microcontroladores usando o padrão [I²C](https://www.i2c-bus.org/specification/ "Padrão I²C").
 Cada microcontrolador deverá simular uma [ECU](https://en.wikipedia.org/wiki/Engine_control_unit "Wikipedia EN"). Sendo estas ECUs divididas da seguinte forma:
-* [Painel](ecu-painel/main.cpp) - Mostrar todas as informações obtidas através da rede.
-* [Motor](ecu-motor/main.cpp) - Simular os seguintes sensores do motor:
+* [Painel](ecu-painel/main.cpp) - Mostra todas as informações obtidas através da rede.
+* [Motor](ecu-motor/main.cpp) - Simula os seguintes sensores do motor:
   - Rotação
   - Temperatura da água do arrafecimento
   - Temperatura ambiente
   - Temperatura de óleo
   - Interruptor de óleo
-* [Câmbio](ecu-cambio/main.cpp) - Simular a troca de marchas da caixa de câmbio.
-* [Traseira](ecu-traseira/main.cpp) - Simular os seguintes sensores da parte traseira do veículo:
+* [Câmbio](ecu-cambio/main.cpp) - Simula a troca de marchas da caixa de câmbio.
+* [Traseira](ecu-traseira/main.cpp) - Simula os seguintes sensores da parte traseira do veículo:
   - Distância traseira
   - Nível do tanque de combustível
 
