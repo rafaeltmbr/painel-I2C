@@ -23,6 +23,6 @@ O Projeto deverá ser implementado através da plataforma [AUTODESK® TINKERCAD�
 O projeto for divido em um grupo de cinco integrantes:
 * Brendon Politori
 * Lucas Maciel
-* Michel
+* Michel Ribeiro
 * Murilo Martins
 * [Rafhael Payão](https://github.com/rafaeltmbr/ "GitHub")
