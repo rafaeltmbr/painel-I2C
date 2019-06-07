@@ -16,5 +16,13 @@ Cada microcontrolador deverá simular uma [ECU](https://en.wikipedia.org/wiki/En
   - Distância traseira
   - Nível do tanque de combustível
 
-O Projeto deverá ser implementado através da plataforma [AUTODESK® TINKERCAD™](https://www.tinkercad.com/). A imagem abaixo demonstra a visão principal do [painel](https://www.tinkercad.com/things/4LXyvpHGJDU "Projeto no TINKERCAD").
+O Projeto deverá ser implementado através da plataforma [AUTODESK® TINKERCAD™](https://www.tinkercad.com/ "TINKERCAD"). A imagem abaixo demonstra a visão principal do [painel](https://www.tinkercad.com/things/4LXyvpHGJDU "Projeto no TINKERCAD").
 ![Imagem principal do painel automotivo](imagens/painel-I2C.png?raw=true "Painel principal")
+
+## Grupo
+O projeto for divido em um grupo de cinco integrantes:
+* Brendon Politori
+* Lucas Maciel
+* Michel
+* Murilo Martins
+* [Rafhael Payão](https://github.com/rafaeltmbr/ "GitHub")
