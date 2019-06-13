@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
+#include <math.h>
 
 #define ENDERECO_TRASEIRA 0x0A
 
@@ -12,23 +13,29 @@
 #define MIN_TANQUE_L 0
 
 #define PINO_BOIA A0
-#define PINO_DISTANCIA A1
+#define PINO_TRIGGER 2
+#define PINO_ECHO 3
+
+#define SOM_CM_US 0.0343
 
 #pragma pack(1)
 
 struct ecu_traseira_t {
-  unsigned int boia;
+  unsigned char boia;
   unsigned char distancia;
 } sensores;
 
+void configuraSensorUltrasonico(void);
 void configuraI2C(void);
 void enviaDadosSensores(void);
 void atualizaSensores(void);
 void atualizaBoia(void);
 void atualizaDistancia(void);
+void requisitaLeituraUltrassonico(void);
 
 void setup()
 {
+  configuraSensorUltrassonico();
   configuraI2C();
 }
 
@@ -41,6 +48,12 @@ void configuraI2C(void)
 {
   Wire.begin(ENDERECO_TRASEIRA);
   Wire.onRequest(enviaDadosSensores);
+}
+
+void configuraSensorUltrassonico(void)
+{
+  pinMode(PINO_TRIGGER, OUTPUT);
+  pinMode(PINO_ECHO, INPUT);  
 }
 
 void enviaDadosSensores(void)
@@ -63,7 +76,19 @@ void atualizaBoia(void)
 
 void atualizaDistancia(void)
 {
-  sensores.distancia = map(analogRead(PINO_DISTANCIA),
-                           MIN_ANALOG, MAX_ANALOG,
-                           MIN_DISTANCIA_CM, MAX_DISTANCIA_CM);
+  requisitaLeituraUltrassonico();  
+  unsigned long duracao = pulseIn(PINO_ECHO, HIGH);
+  unsigned int distancia_cm = round(duracao * SOM_CM_US / 2);
+  
+  sensores.distancia = distancia_cm < 256 ? distancia_cm : 255;
+}
+
+void requisitaLeituraUltrassonico(void)
+{
+  digitalWrite(PINO_TRIGGER, LOW);
+  delayMicroseconds(2);
+  
+  digitalWrite(PINO_TRIGGER, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(PINO_TRIGGER, LOW);
 }
