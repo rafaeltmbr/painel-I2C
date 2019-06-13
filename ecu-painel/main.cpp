@@ -106,12 +106,19 @@ void mensagemInicializacao(void)
   lcd1.print("    REDE I2C");
 
   lcd2.clear();
-  lcd2.setCursor(0, 0);
-  lcd2.print("Brendon  Rafhael");
+  lcd2.setCursor(5, 0);
+  lcd2.print("Equipe:");
   lcd2.setCursor(0, 1);
-  lcd2.print("Murilo     Lucas"); // & Michel
-  
-  delay(DELAY_INICIALIZACAO);
+  lcd2.print("Rafhael    Lucas");
+  delay(DELAY_INICIALIZACAO/2);
+
+  lcd2.clear();
+  lcd2.setCursor(0, 0);
+  lcd2.print("Murilo   Brendon");
+  lcd2.setCursor(0, 1);
+  lcd2.print("Michel Gay");
+  delay(DELAY_INICIALIZACAO/2);
+
   lcd1.clear();
   lcd2.clear();
 }
