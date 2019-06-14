@@ -116,7 +116,7 @@ void mensagemInicializacao(void)
   lcd2.setCursor(0, 0);
   lcd2.print("Murilo   Brendon");
   lcd2.setCursor(0, 1);
-  lcd2.print("Michel Gay");
+  lcd2.print("Michel");
   delay(DELAY_INICIALIZACAO/2);
 
   lcd1.clear();
