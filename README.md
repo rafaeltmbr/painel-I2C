@@ -6,15 +6,15 @@ Criar uma rede de comunicação entre quatro microcontroladores usando o padrão
 Cada microcontrolador deverá simular uma [ECU](https://en.wikipedia.org/wiki/Engine_control_unit "Wikipedia EN"). Sendo estas ECUs divididas da seguinte forma:
 * [Painel](ecu-painel.cpp#L1) - Mostra todas as informações obtidas através da rede.
 * [Motor](ecu-motor.cpp#L1) - Simula os seguintes sensores do motor:
-  - Rotação
-  - Temperatura da água do arrafecimento
-  - Temperatura ambiente
-  - Temperatura de óleo
-  - Interruptor de óleo
+    - Rotação
+    - Temperatura da água do arrafecimento
+    - Temperatura ambiente
+    - Temperatura de óleo
+    - Interruptor de óleo
 * [Câmbio](ecu-cambio.cpp#L1) - Simula a troca de marchas da caixa de câmbio.
 * [Traseira](ecu-traseira.cpp#L1) - Simula os seguintes sensores da parte traseira do veículo:
-  - Distância traseira
-  - Nível do tanque de combustível
+    - Distância traseira
+    - Nível do tanque de combustível
 
 O Projeto deverá ser implementado através da plataforma [AUTODESK® TINKERCAD™](https://www.tinkercad.com/ "TINKERCAD"). A imagem abaixo demonstra a visão principal do [painel](https://www.tinkercad.com/things/4LXyvpHGJDU "Projeto no TINKERCAD").
 ![Imagem principal do painel automotivo](https://raw.githubusercontent.com/rafaeltmbr/painel-I2C/master/imagens/painel-I2C.png "Painel principal")
