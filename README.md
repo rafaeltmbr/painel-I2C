@@ -20,7 +20,7 @@ O Projeto deverá ser implementado através da plataforma [AUTODESK® TINKERCAD�
 ![Imagem principal do painel automotivo](https://raw.githubusercontent.com/rafaeltmbr/painel-I2C/master/imagens/painel-I2C.png "Painel principal")
 
 ## Grupo
-O projeto for divido em um grupo de cinco integrantes:
+O projeto foi divido em um grupo de cinco integrantes:
 * Brendon Politori
 * Lucas Maciel
 * Michel Ribeiro
